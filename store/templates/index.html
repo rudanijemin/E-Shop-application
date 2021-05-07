@@ -1,24 +1,32 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>E-Shop </title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-{% for product in products %}
-    <table>
-       <tr>
-          <td>{{product.name}}</td>
-          <td>- {{product.category.name}}</td>
-          <td>{{product.price}}</td>
-          <td>{{product.image }}</td>
-
-
-
-       </tr>
-    </table>
+{%block content%}
+ <div class="container-fluid mt-3 my-10">
+  <div class="row mx-auto">
+  {% for product in products %}
+    
+  <div class="card" style="width: 10rem;" >
+  <img src="{{product.image.url}}" class="card-img-top" alt="...">
+  <div class="card-body mx-auto">
+    <p class="card-title">{{product.name}}</p>
+    <p class="card-text"><b>{{product.price}}</b></p>
+   
+    
+    <a href="#" class="btn btn-dark border btn-sm">Add to card</a>
+  </div>
+</div>  
         
 {% endfor %}
+      
+  </div>
+</div>
 
-</body>
-</html>
+
+{%endblock%}
+ 
+
+  
+    
+
+
+
