@@ -1,11 +1,27 @@
 {% extends 'base.html' %}
 
 {%block content%}
- <div class="container-fluid mt-3 my-10">
-  <div class="row mx-auto">
+ <div class="container-fluid mt-3 my-9">
+ 
+  <div class='row'>
+  <!...filter>
+  <div class="col-lg-2 mx-auto">
+  <div class="list-group">
+    {% for category in categories %}
+    <a href="   " class="list-group-item list-group-item-action"> {{category.name}} </a>
+     {% endfor%}
+  </div>
+  </div>
+
+
+
+
+   <!....all product>
+  <div id='product' class='col-lg-10 mx-auto'>
+   <div class="row mx-auto">
   {% for product in products %}
     
-  <div class="card" style="width: 10rem;" >
+  <div class="card" style="width: 25rem; mx-auto" >
   <img src="{{product.image.url}}" class="card-img-top" alt="...">
   <div class="card-body mx-auto">
     <p class="card-title">{{product.name}}</p>
@@ -18,6 +34,9 @@
         
 {% endfor %}
       
+  </div>
+
+  </div>
   </div>
 </div>
 
