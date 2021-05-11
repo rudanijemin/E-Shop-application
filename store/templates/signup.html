@@ -1,6 +1,46 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1> signup page </h1>
+
+<div class="container">
+    <div class="p-4 m-4">
+        <div class="col-lg-5 mx-auto border rounded pt-4">
+
+            <! first name>
+            <div class="from group">
+                <label for="exampleFormControlInput1" class="form-label">first name</label>
+                <input type="text" class="form-control  form-control-sm" id="exampleFormControlInput1" placeholder="">
+            </div>
+
+            <! last name>
+            <div class="from group">
+                <label for="exampleFormControlInput1" class="form-label">last name</label>
+                <input type="text" class="form-control form-control-sm" id="exampleFormControlInput1" placeholder="">
+            </div>
+
+             <! phone>
+            <div class="from group">
+                <label for="exampleFormControlInput1" class="form-label">phone number</label>
+                <input type="text" class="form-control form-control-sm" id="exampleFormControlInput1" placeholder="1459876511">
+            </div> 
+
+            <!email>
+            <div class="from group">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control form-control-sm" id="exampleFormControlInput1" placeholder="exampal@gmail.com.com">
+            </div>
+
+            <!password>
+            <div class="from group">
+                <label for="exampleFormControlTextarea1" class="form-label">password</label>
+                <input type="password" class="form-control  form-control-sm" id="exampleFormControlTextarea1" placeholder="*****">
+            </div>
+
+            <div class="from group">
+                <input class="btn btn-sm btn-info  form-control-sm" type="sumbit" value="creat an account">
+            </div>
+        </div> 
+    </div>
+</div>    
 
 {% endblock %}
