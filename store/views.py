@@ -18,3 +18,6 @@ def index(request):
     data["products"]=Products
     data["categories"]=categories
     return render(request,"index.html",data)
+
+def signup(request):
+    return render(request,"signup.html")
